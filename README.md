@@ -1,3 +1,3 @@
 # Myrepo
-Sample maven codei..
+Sample maven codei
 .
