@@ -1,29 +1,28 @@
-pipeline {
+pipeline { 
+  
+   agent any
 
-  agent any
-
-  options {
-
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-
-  }
-
-  stages {
-
-    stage('Hello') {
-
-      steps {
-
-        sh '''
-
-          java -version
-
-        '''
-
+   stages {
+   
+     stage('Install Dependencies') { 
+        steps { 
+           sh 'echo "Install"' 
+        }
+     }
+     
+     stage('Test') { 
+        steps { 
+           sh 'echo "testing application..."'
+        }
       }
 
-    }
+         stage("Deploy application") { 
+         steps { 
+           sh 'echo "deploying application..."'
+         }
 
-  }
+     }
+  
+   	}
 
-}
+   }
