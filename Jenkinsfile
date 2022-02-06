@@ -1,32 +1,29 @@
 pipeline {
-    agent master
 
-    stages {
-        stage ('Compile Stage') {
+  agent any
 
-            steps {
-                withMaven(maven : 'maven_3_0)5') {
-                    sh 'mvn clean compile'
-                }
-            }
-        }
+  options {
 
-        stage ('Testing Stage') {
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 
-            steps {
-                withMaven(maven : 'maven_3_0_5') {
-                    sh 'mvn test'
-                }
-            }
-        }
+  }
 
+  stages {
 
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'maven_3_0_5') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
+    stage('Hello') {
+
+      steps {
+
+        sh '''
+
+          java -version
+
+        '''
+
+      }
+
     }
+
+  }
+
 }
