@@ -1,0 +1,9 @@
+pipeline {
+  agent master
+  stages(
+     
+	 stage(Install packages){
+	    steps 'sh mvn clean install'
+	 }
+	 )
+}
