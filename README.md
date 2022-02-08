@@ -1,2 +1,0 @@
-# Myrepo
-Sample maven code..
