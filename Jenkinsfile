@@ -4,7 +4,7 @@ pipeline {
         maven 'Maven363'
     }
     options {
-        timeout(5)
+        timeout(10)
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '5', numToKeepStr: '5')
     }
     stages {
