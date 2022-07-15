@@ -30,7 +30,7 @@ public class Hello {
     }
 
     /**
-     * Say "Hello!".
+     * Say "Hello!"...
      *
      * @param printer PrintStream to write output to.
      */
