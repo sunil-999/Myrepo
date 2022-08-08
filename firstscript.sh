@@ -6,8 +6,8 @@ this is to test my initial shell script
 This is to test from jenkins build byd doing some changes in script
 EOF
 echo "Enter the value:"
-read count
-if [ $count == 10 ]
+x = $count
+if [ x == 10 ]
 then
    echo "Values are equal"
 elif [[ a == b ]]
