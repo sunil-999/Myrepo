@@ -7,7 +7,7 @@ This is to test from jenkins build byd doing some changes in script
 EOF
 echo "Enter the value:"
 read count
-if [ $count -eq 10 ]
+if [ $count == 10 ]
 then
    echo "Values are equal"
 elif [[ a == b ]]
