@@ -16,7 +16,7 @@ pipeline {
         }
 		stage('Git checkout') {
             steps {
-                git credentialsId:  branch: 'feature1','08cfd5d1-cbd4-42c5-b753-298cb74c7607', url: 'https://github.com/sunil-999/Myrepo.git'
+                git branch: 'feature1', credentialsId: '08cfd5d1-cbd4-42c5-b753-298cb74c7607', url: 'https://github.com/sunil-999/Myrepo.git'
 				
             }
         }
